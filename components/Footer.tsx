@@ -1,4 +1,4 @@
-import { Home, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Home } from 'lucide-react';
 import Link from 'next/link';
 import FooterForm from './FooterForm';
 
@@ -18,23 +18,27 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm text-neutral-500">
-              Reimagining real estate in Sihi, Noida. Find your perfect space with modern tools and expert guidance.
+              Your trusted real estate agency in Sihi, Gurugram. We specialize in verified residential and commercial properties at the best prices.
             </p>
-            <div className="mt-6 flex gap-4 text-neutral-400">
-              <Link href="#" className="hover:text-neutral-900"><Facebook className="h-5 w-5" /></Link>
-              <Link href="#" className="hover:text-neutral-900"><Twitter className="h-5 w-5" /></Link>
-              <Link href="#" className="hover:text-neutral-900"><Instagram className="h-5 w-5" /></Link>
-              <Link href="#" className="hover:text-neutral-900"><Linkedin className="h-5 w-5" /></Link>
-            </div>
           </div>
           
           <div>
             <h3 className="mb-4 text-sm font-semibold tracking-wider text-neutral-900 uppercase">Properties</h3>
             <ul className="space-y-3 text-sm text-neutral-500">
-              <li><Link href="/buy" className="hover:text-neutral-900">Homes for Sale</Link></li>
-              <li><Link href="/rent" className="hover:text-neutral-900">Homes for Rent</Link></li>
+              <li><Link href="/buy" className="hover:text-neutral-900">Buy Property in Gurugram</Link></li>
+              <li><Link href="/sell" className="hover:text-neutral-900">Sell Property</Link></li>
+              <li><Link href="/rent" className="hover:text-neutral-900">Flats for Rent</Link></li>
               <li><Link href="/buy" className="hover:text-neutral-900">Commercial Spaces</Link></li>
-              <li><Link href="/buy" className="hover:text-neutral-900">New Developments</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-sm font-semibold tracking-wider text-neutral-900 uppercase">Top Locations</h3>
+            <ul className="space-y-3 text-sm text-neutral-500">
+              <li><Link href="/buy" className="hover:text-neutral-900">Sihi, Gurugram</Link></li>
+              <li><Link href="/buy" className="hover:text-neutral-900">Sector 81 & 82, Gurugram</Link></li>
+              <li><Link href="/buy" className="hover:text-neutral-900">New Gurgaon</Link></li>
+              <li><Link href="/buy" className="hover:text-neutral-900">Dwarka Expressway</Link></li>
             </ul>
           </div>
 
@@ -42,27 +46,17 @@ export default function Footer() {
             <h3 className="mb-4 text-sm font-semibold tracking-wider text-neutral-900 uppercase">Company</h3>
             <ul className="space-y-3 text-sm text-neutral-500">
               <li><Link href="/about" className="hover:text-neutral-900">About Us</Link></li>
-              <li><Link href="/about" className="hover:text-neutral-900">Our Agents</Link></li>
-              <li><Link href="/about" className="hover:text-neutral-900">Careers</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 text-sm font-semibold tracking-wider text-neutral-900 uppercase">Resources</h3>
-            <ul className="space-y-3 text-sm text-neutral-500">
-              <li><Link href="#" className="hover:text-neutral-900">Blog</Link></li>
-              <li><Link href="#" className="hover:text-neutral-900">Market Reports</Link></li>
-              <li><Link href="#" className="hover:text-neutral-900">Buyer's Guide</Link></li>
-              <li><Link href="#" className="hover:text-neutral-900">Seller's Guide</Link></li>
+              <li><Link href="/about" className="hover:text-neutral-900">Our Services</Link></li>
+              <li><Link href="/about" className="hover:text-neutral-900">Contact Agent</Link></li>
+              <li><Link href="#" className="hover:text-neutral-900">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>
         
         <div className="mt-12 flex flex-col items-center justify-between border-t border-neutral-200 pt-8 sm:flex-row text-sm text-neutral-500">
           <p>© {new Date().getFullYear()} Moon Property. All rights reserved.</p>
-          <div className="mt-4 flex gap-6 sm:mt-0">
-            <Link href="#" className="hover:text-neutral-900">Privacy Policy</Link>
-            <Link href="#" className="hover:text-neutral-900">Terms of Service</Link>
+          <div className="mt-4 flex gap-6 sm:mt-0 text-center sm:text-right">
+            <span className="text-xs text-neutral-400">Serving Sihi, Sector 81, Sector 82, Sector 83, New Gurgaon, Dwarka Expressway, Golf Course Extension Road, Sohna Road, Gurugram</span>
           </div>
         </div>
       </div>

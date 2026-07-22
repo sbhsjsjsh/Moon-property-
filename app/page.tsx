@@ -1,11 +1,12 @@
 import Image from 'next/image';
-import { MapPin } from 'lucide-react';
+import { MapPin, Building2, Home, Landmark, Briefcase, Star, Search, Handshake } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PropertyCard from '@/components/PropertyCard';
 import { featuredProperties } from '@/data/properties';
+import Link from 'next/link';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-neutral-50 font-sans">
       <Navbar />
@@ -14,32 +15,55 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative px-4 pt-16 pb-24 sm:px-6 sm:pt-24 lg:px-8 lg:pt-32">
           <div className="mx-auto max-w-7xl">
-            <div className="text-center max-w-3xl mx-auto">
+            <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl font-extrabold tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
-                Find your perfect home in <span className="text-neutral-500">Sihi, Noida</span>
+                Moon Property: Your Trusted Real Estate Agency in <span className="text-neutral-500">Sihi, Gurugram</span>
               </h1>
-              <p className="mt-6 text-lg text-neutral-600 sm:text-xl">
-                Discover the best premium and affordable properties tailored to your lifestyle. We make finding your dream location simple.
+              <p className="mt-6 text-lg text-neutral-600 sm:text-xl leading-relaxed">
+                Looking to buy, sell, or rent property in Gurugram? Moon Property is your premier real estate consultant specializing in Sihi, Sector 81, Sector 82, Sector 83, New Gurgaon, and Dwarka Expressway. Find verified flats, builder floors, luxury apartments, and commercial properties at the best prices.
               </p>
             </div>
           </div>
         </section>
 
+        {/* Property Categories */}
+        <section className="bg-white py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold tracking-tight text-center text-neutral-900 mb-12">
+              Explore Property Types in Gurugram
+            </h2>
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+              {[
+                { name: 'Flats & Apartments', icon: Building2 },
+                { name: 'Builder Floors', icon: Home },
+                { name: 'Luxury Villas', icon: Landmark },
+                { name: 'Plots & Land', icon: MapPin },
+                { name: 'Commercial Property', icon: Briefcase },
+              ].map((category) => (
+                <div key={category.name} className="flex flex-col items-center p-6 bg-neutral-50 rounded-2xl border border-neutral-100 hover:border-neutral-300 transition-colors text-center cursor-pointer">
+                  <category.icon className="h-8 w-8 text-neutral-700 mb-3" />
+                  <span className="font-semibold text-neutral-900">{category.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Featured Properties */}
-        <section className="bg-white py-16 sm:py-24">
+        <section className="bg-neutral-50 py-16 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
               <div className="max-w-2xl">
                 <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
-                  Featured Properties
+                  Featured Properties for Sale in Gurugram
                 </h2>
                 <p className="mt-4 text-lg text-neutral-600">
-                  Handpicked properties that offer the best value and location in Sihi, Noida.
+                  Discover top real estate deals in Sihi, New Gurgaon, and near Dwarka Expressway.
                 </p>
               </div>
-              <button className="mt-6 md:mt-0 inline-flex font-semibold text-neutral-900 hover:text-neutral-600">
+              <Link href="/buy" className="mt-6 md:mt-0 inline-flex font-semibold text-neutral-900 hover:text-neutral-600">
                 View all properties &rarr;
-              </button>
+              </Link>
             </div>
             
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -50,41 +74,90 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Value Proposition */}
+        {/* Local SEO / Target Locations */}
+        <section className="bg-white py-16 sm:py-24 border-t border-neutral-200">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 mb-8">
+              Premium Real Estate Locations in Gurugram
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-neutral-600 leading-relaxed">
+              <div>
+                <p className="mb-4">
+                  As a leading <strong>Property Dealer in Sihi</strong>, Moon Property offers exclusive access to the most sought-after neighborhoods in Gurugram. Whether you are searching for a dream home or a high-ROI investment, our expertise in local markets ensures you make the best choice.
+                </p>
+                <p>
+                  Our primary focus areas include residential and commercial properties in <strong>Sihi, Sector 81, Sector 82, and Sector 83, Gurugram</strong>. These sectors are rapidly developing with world-class amenities, excellent schools, and top-tier hospitals.
+                </p>
+              </div>
+              <div>
+                <p className="mb-4">
+                  We also specialize in properties across <strong>New Gurgaon</strong> and along the <strong>Dwarka Expressway</strong>, offering seamless connectivity to Delhi and the rest of NCR.
+                </p>
+                <p>
+                  Looking for premium segments? Explore our luxury apartments and builder floors near <strong>Golf Course Extension Road</strong> and <strong>Sohna Road</strong>. Moon Property is your dedicated real estate consultant in Gurugram for all your property needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Value Proposition (E-E-A-T) */}
         <section className="py-16 sm:py-24 bg-neutral-900 text-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">
+              Why Choose Moon Property as Your Real Estate Consultant?
+            </h2>
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
               <div>
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 mb-6">
-                  <MapPin className="h-6 w-6 text-white" />
+                  <Star className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Prime Locations</h3>
+                <h3 className="text-xl font-bold mb-3">Expertise & Experience</h3>
                 <p className="text-neutral-400">
-                  We specialize in the most sought-after neighborhoods, ensuring your investment grows over time.
+                  With years of deep-rooted experience in the Gurugram real estate market, our certified property dealers understand local trends, pricing, and investment hotspots better than anyone.
                 </p>
               </div>
               <div>
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 mb-6">
-                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
+                  <Handshake className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Trusted Agents</h3>
+                <h3 className="text-xl font-bold mb-3">Trustworthiness & Transparency</h3>
                 <p className="text-neutral-400">
-                  Our certified professionals guide you through every step with transparency and expertise.
+                  We follow strict ethical guidelines. Every property is thoroughly verified for legal compliance, ensuring our clients experience a safe, scam-free, and transparent transaction.
                 </p>
               </div>
               <div>
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 mb-6">
-                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+                  <Search className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Best Prices</h3>
+                <h3 className="text-xl font-bold mb-3">Authoritative Guidance</h3>
                 <p className="text-neutral-400">
-                  We negotiate the best deals for our clients, guaranteeing maximum value for your budget.
+                  From property search to finalizing paperwork and securing loans, we provide end-to-end authoratitive guidance. We negotiate the best prices on flats, plots, and commercial spaces.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* FAQ Section */}
+        <section className="bg-white py-16 sm:py-24">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 mb-8 text-center">
+              Frequently Asked Questions (FAQs)
+            </h2>
+            <div className="space-y-6">
+              {[
+                { q: "Where is Moon Property located?", a: "Moon Property is a premier real estate agency located in Sihi, Gurugram. We serve clients across Sector 81, 82, 83, New Gurgaon, and Dwarka Expressway." },
+                { q: "What types of properties do you deal in?", a: "We deal in residential and commercial properties, including flats, luxury apartments, builder floors, villas, and plots in Gurugram." },
+                { q: "Is Sector 81 Gurugram a good place to invest?", a: "Yes, Sector 81 is a highly sought-after location in New Gurgaon due to its excellent connectivity, proximity to NH-48, and premium residential projects." },
+                { q: "Do you help with renting properties in Gurugram?", a: "Absolutely! We assist tenants in finding the best rental flats and apartments, and help landlords find verified tenants." },
+                { q: "How can I verify a property before buying?", a: "Our team at Moon Property conducts strict legal and background checks on all listings to ensure they are 100% verified and litigation-free." }
+              ].map((faq, i) => (
+                <div key={i} className="border-b border-neutral-200 pb-6">
+                  <h3 className="text-lg font-bold text-neutral-900 mb-2">{faq.q}</h3>
+                  <p className="text-neutral-600">{faq.a}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
