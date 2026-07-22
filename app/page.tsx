@@ -13,7 +13,7 @@ export default function HomePage() {
       
       <main>
         {/* Hero Section */}
-        <section className="relative px-4 pt-16 pb-24 sm:px-6 sm:pt-24 lg:px-8 lg:pt-32">
+        <section className="relative px-4 pt-20 pb-28 sm:px-6 sm:pt-28 sm:pb-32 lg:px-8 lg:pt-36 lg:pb-40 bg-gradient-to-br from-neutral-200/80 via-neutral-100/50 to-neutral-50 border-b border-neutral-200">
           <div className="mx-auto max-w-7xl">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl font-extrabold tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
