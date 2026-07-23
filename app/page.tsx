@@ -13,15 +13,38 @@ export default function HomePage() {
       
       <main>
         {/* Hero Section */}
-        <section className="relative px-4 pt-20 pb-28 sm:px-6 sm:pt-28 sm:pb-32 lg:px-8 lg:pt-36 lg:pb-40 bg-gradient-to-br from-neutral-200/80 via-neutral-100/50 to-neutral-50 border-b border-neutral-200">
+        <section id="hero" className="relative px-4 pt-20 pb-28 sm:px-6 sm:pt-28 sm:pb-32 lg:px-8 lg:pt-36 lg:pb-40 bg-gradient-to-br from-neutral-200/80 via-neutral-100/50 to-neutral-50 border-b border-neutral-200">
           <div className="mx-auto max-w-7xl">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl font-extrabold tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
-                Moon Property: Your Trusted Real Estate Agency in <span className="text-neutral-500">Sihi, Gurugram</span>
-              </h1>
-              <p className="mt-6 text-lg text-neutral-600 sm:text-xl leading-relaxed">
-                Looking to buy, sell, or rent property in Gurugram? Moon Property is your premier real estate consultant specializing in Sihi, Sector 81, Sector 82, Sector 83, New Gurgaon, and Dwarka Expressway. Find verified flats, builder floors, luxury apartments, and commercial properties at the best prices.
-              </p>
+            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+              <div className="text-center lg:text-left max-w-3xl lg:max-w-2xl mx-auto lg:mx-0 flex-1">
+                <h1 className="text-4xl font-extrabold tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
+                  Moon Property: Your Trusted Real Estate Agency in <br className="hidden lg:block"/> <span className="text-neutral-500">Sihi, Gurugram</span>
+                </h1>
+                <p className="mt-6 text-lg text-neutral-600 sm:text-xl leading-relaxed">
+                  Looking to buy, sell, or rent property in Gurugram? Moon Property is your premier real estate consultant specializing in Sihi, Sector 81, Sector 82, Sector 83, New Gurgaon, and Dwarka Expressway. Find verified flats, builder floors, luxury apartments, and commercial properties at the best prices.
+                </p>
+                <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Link href="/buy" className="rounded-full bg-neutral-900 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-neutral-800 text-center shadow-lg shadow-neutral-200">
+                    Explore Properties
+                  </Link>
+                  <Link href="#footer-form" className="rounded-full bg-white px-8 py-3.5 text-base font-semibold text-neutral-900 transition-colors hover:bg-neutral-50 border border-neutral-200 text-center shadow-sm">
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+              <div className="flex-1 w-full max-w-lg lg:max-w-none mx-auto mt-8 lg:mt-0 relative">
+                <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden shadow-2xl bg-neutral-100 border border-neutral-200/60">
+                  <Image 
+                    src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" 
+                    alt="Beautiful modern house representing prime real estate"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                    priority
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>

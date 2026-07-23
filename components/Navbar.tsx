@@ -29,6 +29,7 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex md:items-center md:gap-8">
+          <Link href="/#hero" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">Home</Link>
           <Link href="/buy" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">Buy</Link>
           <Link href="/rent" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">Rent</Link>
           <Link href="/sell" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">Sell</Link>
@@ -57,10 +58,11 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden border-t border-neutral-200 bg-white">
           <div className="space-y-1 px-4 pb-3 pt-2 sm:px-6">
-            <Link href="/buy" className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">Buy</Link>
-            <Link href="/rent" className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">Rent</Link>
-            <Link href="/sell" className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">Sell</Link>
-            <Link href="/about" className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">About</Link>
+            <Link href="/#hero" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">Home</Link>
+            <Link href="/buy" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">Buy</Link>
+            <Link href="/rent" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">Rent</Link>
+            <Link href="/sell" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">Sell</Link>
+            <Link href="/about" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">About</Link>
             <div className="mt-4 px-3">
               <button 
                 onClick={scrollToFooter}
