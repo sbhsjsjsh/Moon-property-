@@ -8,20 +8,33 @@ export default function FooterForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    budget: 'Under ₹50 Lakhs',
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
       setIsSubmitted(true);
-      
-      // Auto close after success
+      setFormData({ name: '', email: '', phone: '', budget: 'Under ₹50 Lakhs' });
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    }, 1200);
+    } catch (err) {
+      console.error('Failed to submit form', err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -52,30 +65,37 @@ export default function FooterForm() {
                   type="text"
                   required
                   placeholder="Full Name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full rounded-xl border border-neutral-700 bg-neutral-800/50 px-6 py-4 text-white placeholder-neutral-500 backdrop-blur-sm transition-colors focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
                 />
                 <input
                   type="email"
                   required
                   placeholder="Email Address"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full rounded-xl border border-neutral-700 bg-neutral-800/50 px-6 py-4 text-white placeholder-neutral-500 backdrop-blur-sm transition-colors focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
                 />
                 <input
                   type="tel"
                   required
                   placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full rounded-xl border border-neutral-700 bg-neutral-800/50 px-6 py-4 text-white placeholder-neutral-500 backdrop-blur-sm transition-colors focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
                 />
                 <select
                   required
-                  defaultValue=""
+                  value={formData.budget}
+                  onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                   className="w-full rounded-xl border border-neutral-700 bg-neutral-800/50 px-6 py-4 text-white backdrop-blur-sm transition-colors focus:border-white focus:outline-none focus:ring-1 focus:ring-white appearance-none cursor-pointer"
                 >
                   <option value="" disabled className="text-neutral-500">Select Budget</option>
-                  <option value="under-50l" className="bg-neutral-900">Under ₹50 Lakhs</option>
-                  <option value="50l-1cr" className="bg-neutral-900">₹50 Lakhs - ₹1 Crore</option>
-                  <option value="1cr-3cr" className="bg-neutral-900">₹1 Crore - ₹3 Crores</option>
-                  <option value="above-3cr" className="bg-neutral-900">Above ₹3 Crores</option>
+                  <option value="Under ₹50 Lakhs" className="bg-neutral-900">Under ₹50 Lakhs</option>
+                  <option value="₹50 Lakhs - ₹1 Crore" className="bg-neutral-900">₹50 Lakhs - ₹1 Crore</option>
+                  <option value="₹1 Crore - ₹3 Crores" className="bg-neutral-900">₹1 Crore - ₹3 Crores</option>
+                  <option value="Above ₹3 Crores" className="bg-neutral-900">Above ₹3 Crores</option>
                 </select>
 
                 <button
@@ -100,7 +120,7 @@ export default function FooterForm() {
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-500/10 text-green-400 ring-4 ring-green-500/20">
                 <CheckCircle2 className="h-8 w-8" />
               </div>
-              <h3 className="mb-2 text-2xl font-bold text-white">You're on the list!</h3>
+              <h3 className="mb-2 text-2xl font-bold text-white">You&apos;re on the list!</h3>
               <p className="text-neutral-400">
                 Keep an eye on your inbox for the latest exclusive listings.
               </p>
