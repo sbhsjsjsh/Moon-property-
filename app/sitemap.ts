@@ -24,7 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // Contact/About pages: monthly | priority 0.6
-  const staticPages = ['about']; // Add 'contact' here if created in the future
+  const staticPages: string[] = []; // Add static pages here
   const infoPages: MetadataRoute.Sitemap = staticPages.map((route) => ({
     url: `${baseUrl}/${route}`,
     lastModified: new Date(),

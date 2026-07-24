@@ -13,18 +13,18 @@ export default function HomePage() {
       
       <main>
         {/* Hero Section */}
-        <section id="hero" className="relative px-4 pt-20 pb-28 sm:px-6 sm:pt-28 sm:pb-32 lg:px-8 lg:pt-36 lg:pb-40 bg-gradient-to-br from-neutral-200/80 via-neutral-100/50 to-neutral-50 border-b border-neutral-200">
-          <div className="mx-auto max-w-7xl">
+        <section id="hero" className="relative px-4 pt-20 pb-28 sm:px-6 sm:pt-28 sm:pb-32 lg:px-8 lg:pt-36 lg:pb-40 bg-gradient-to-br from-blue-100 via-indigo-50 to-white border-b border-neutral-200">
+          <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true"><div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#9089fc] to-[#ff80b5] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div></div><div className="mx-auto max-w-7xl">
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
               <div className="text-center lg:text-left max-w-3xl lg:max-w-2xl mx-auto lg:mx-0 flex-1">
                 <h1 className="text-4xl font-extrabold tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
-                  Moon Property: Your Trusted Real Estate Agency in <br className="hidden lg:block"/> <span className="text-neutral-500">Sihi, Gurugram</span>
+                  Moon Property: Your Trusted Real Estate Agency in <br className="hidden lg:block"/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Sihi, Gurugram</span>
                 </h1>
                 <p className="mt-6 text-lg text-neutral-600 sm:text-xl leading-relaxed">
                   Looking to buy, sell, or rent property in Gurugram? Moon Property is your premier real estate consultant specializing in Sihi, Sector 81, Sector 82, Sector 83, New Gurgaon, and Dwarka Expressway. Find verified flats, builder floors, luxury apartments, and commercial properties at the best prices.
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Link href="/buy" className="rounded-full bg-neutral-900 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-neutral-800 text-center shadow-lg shadow-neutral-200">
+                  <Link href="/buy" className="rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-3.5 text-base font-semibold text-white transition-all hover:opacity-90 hover:shadow-xl text-center shadow-lg shadow-blue-200">
                     Explore Properties
                   </Link>
                   <Link href="#footer-form" className="rounded-full bg-white px-8 py-3.5 text-base font-semibold text-neutral-900 transition-colors hover:bg-neutral-50 border border-neutral-200 text-center shadow-sm">
@@ -47,6 +47,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+          <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true"><div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div></div>
         </section>
 
         {/* Property Categories */}
@@ -70,6 +71,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+          <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true"><div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div></div>
         </section>
 
         {/* Featured Properties */}
@@ -95,6 +97,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+          <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true"><div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div></div>
         </section>
 
         {/* Local SEO / Target Locations */}
@@ -122,6 +125,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+          <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true"><div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div></div>
         </section>
 
         {/* Value Proposition (E-E-A-T) */}
@@ -160,6 +164,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+          <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true"><div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div></div>
         </section>
         
         {/* FAQ Section */}
@@ -183,6 +188,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+          <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true"><div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div></div>
         </section>
       </main>
 

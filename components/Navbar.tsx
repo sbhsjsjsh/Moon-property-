@@ -33,7 +33,6 @@ export default function Navbar() {
           <Link href="/buy" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">Buy</Link>
           <Link href="/rent" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">Rent</Link>
           <Link href="/sell" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">Sell</Link>
-          <Link href="/about" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">About</Link>
           <button 
             onClick={scrollToFooter}
             className="rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-neutral-800"
@@ -62,7 +61,6 @@ export default function Navbar() {
             <Link href="/buy" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">Buy</Link>
             <Link href="/rent" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">Rent</Link>
             <Link href="/sell" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">Sell</Link>
-            <Link href="/about" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 text-base font-medium text-neutral-900 hover:bg-neutral-50">About</Link>
             <div className="mt-4 px-3">
               <button 
                 onClick={scrollToFooter}
